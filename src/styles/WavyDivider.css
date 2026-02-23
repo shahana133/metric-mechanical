@@ -1,0 +1,15 @@
+.wavy-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wavy-divider svg {
+  /* display: block; */
+  width: 100%;
+  height: 120%;
+}
+
+.wavy-divider.flip svg {
+  transform: rotate(180deg);
+}

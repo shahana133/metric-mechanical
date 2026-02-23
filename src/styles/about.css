@@ -1,0 +1,440 @@
+/* ===== HERO SECTION ===== */
+.about-hero {
+  height: 44vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+
+  background-image: url('/images/about-hero.jpg'); /* ✅ leading slash for public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: 280px 180px;
+  background-color: #ffffff;
+  margin-top: 100px;
+  margin-bottom: -50px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+}
+/* Reduce top margin for About content */
+.home-about {
+  margin-top: 20px;   /* reduce the space above About content */
+  padding-top: 0;     /* remove extra padding if any */
+}
+
+/* Optional: reduce spacing inside text */
+.home-about .about-text p {
+  margin-bottom: 15px; /* slightly smaller paragraph spacing */
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h3 {
+  color: #d50000;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 18px;
+
+  /* ✅ JUSTIFY ALIGNMENT */
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .home-about {
+    margin-top: 0; /* reset for small screens */
+  }
+}
+
+/* About page bottom section */
+.about-bottom {
+  background: linear-gradient(to bottom, #c00000 0%, #a50000 100%);
+  color: white;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about-bottom::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('/images/wave-top.svg') no-repeat top center; /* optional wave SVG */
+  background-size: cover;
+}
+
+.about-bottom-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-bottom-item {
+  max-width: 400px;
+}
+
+.about-bottom-item .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* Adjust overlay to sit above particles if needed */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(150, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  z-index: 2;
+}
+
+/* Hero content stays on top */
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+/* .about-hero {
+  position: relative;
+  height: 44vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center text */
+  /* overflow: hidden;
+  padding-left: 80px; */
+/* } */
+ 
+  /* ===== ABOUT HERO ===== */
+
+.about-hero {
+  height: 45vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -285px;   /* 👈 ADD THIS */
+
+}
+
+/* Background image div */
+.about-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0; /* at bottom */
+}
+
+/* Particles above background */
+.about-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* above image */
+}
+
+/* Overlay */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Hero text above everything */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+}
+/* Discover More Button */
+.discover-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #d10000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+  background: #a00000;
+  transform: translateY(-3px);
+}
+/* ===== PRODUCTS HIGHLIGHT SECTION ===== */
+.about-products {
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+
+/* RIGHT TEXT */
+.products-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.products-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.products-text h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #d10000;
+  margin-bottom: 15px;
+}
+
+.products-text h4 {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.see-products-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #d10000;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.see-products-btn:hover {
+  background: #a00000;
+  transform: translateY(-2px);
+}
+/* ===== PRODUCTS HIGHLIGHT SECTION ===== */
+.about-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+/* LEFT IMAGE CONTAINER */
+.products-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.products-image img {
+  width: 100%;
+  height: 300px; /* give a fixed height */
+  object-fit: cover; /* makes image fit nicely */
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.products-image img:hover {
+  transform: scale(1.05);
+}
+
+/* RIGHT TEXT CONTENT */
+.products-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.products-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.products-text h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #d10000;
+  margin-bottom: 15px;
+}
+
+.products-text h4 {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.see-products-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #d10000;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.see-products-btn:hover {
+  background: #a00000;
+  transform: translateY(-2px);
+}
+
+/* Make slider dots above images */
+.slick-dots {
+  bottom: -30px;
+}
+/* ===== PROJECTS SECTION ===== */
+/* ===== PROJECTS SECTION ===== */
+.about-projects {
+  position: relative;
+  background: url("../assets/about-bg.jpg") no-repeat center center;
+  background-size: cover;          /* makes full background fit */
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.about-projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for text readability */
+  z-index: 1;
+}
+
+.about-projects-container {
+  position: relative;
+  z-index: 2;                      /* ensures text & slider are above overlay */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-projects-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  color: #fff;                     /* white text */
+}
+
+.about-projects-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-projects-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-projects-slider {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.about-projects-slider img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .about-projects-container {
+    flex-direction: column;
+  }
+
+  .about-projects-text,
+  .about-projects-slider {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}

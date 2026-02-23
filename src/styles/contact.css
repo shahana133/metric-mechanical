@@ -1,0 +1,118 @@
+/* ===== HERO SECTION ===== */
+.contact-hero {
+  height: 45vh;
+  background: url("/images/contact-banner.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(150, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.contact-hero-overlay h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* ===== CONTACT CONTENT ===== */
+.contact-content {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 90%;
+  max-width: 1100px;
+  background: #fff;
+  display: flex;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.contact-left {
+  flex: 1;
+  padding: 50px;
+  border-right: 1px solid #eee;
+}
+
+.contact-left h2 {
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  color: #c00000;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+/* RIGHT SIDE */
+.contact-right {
+  flex: 1;
+  padding: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  padding: 12px 30px;
+  background: #c00000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #900000;
+}
+.contact-logo {
+  max-width: 230px;
+  margin-bottom: 50px;
+  /* display: block; */
+  margin-left: -100;
+}
+
+
+/* MAP */
+.contact-map iframe {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-left {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}

@@ -1,0 +1,131 @@
+.products-section {
+  padding: 80px 8%;
+  background: #0f0f12;
+  color: white;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-size: 38px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* ================= CATEGORY BUTTONS ================= */
+
+.category-buttons {
+  margin-bottom: 40px;
+}
+
+.category-buttons button {
+  margin: 8px;
+  padding: 10px 20px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.category-buttons button:hover {
+  background: #f4b400;
+  color: #000;
+  border-color: #f4b400;
+}
+
+.active-btn {
+  background: #f4b400;
+  color: #000;
+  border-color: #f4b400;
+}
+
+/* ================= PRODUCTS GRID ================= */
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card {
+  background: #18181b;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(244, 180, 0, 0.3);
+}
+
+/* ================= PRODUCT IMAGE ================= */
+
+.product-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* ================= PRODUCT TITLE ================= */
+
+.product-card h3 {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+/* 
+.products-section {
+  margin-top: 150px;
+} */
+/* ===== PAGE WRAPPER ===== */
+.products-page {
+  font-family: Arial, sans-serif;
+}
+
+/* ===== HERO SECTION ===== */
+.products-hero {
+  height: 45vh;
+  position: relative;
+  background: url("/images/photo33.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.products-hero-overlay h1 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.products-hero-overlay p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.9;
+}

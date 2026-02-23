@@ -1,0 +1,163 @@
+/* ===== TOP BAR ===== */
+.top-bar {
+  width: 190%;
+  background: #100909;
+  color: #fff;
+  font-size: 39px;
+  padding: 20px 120px;
+}
+
+.top-bar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-left span {
+  margin-right: 20px;
+}
+
+.top-left svg {
+  margin-right: 6px;
+  color: #b01b1b;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  height: 120px;           /* fixed height */
+  padding: 0 45px;        /* no vertical padding */
+  display: flex;
+  align-items: center;    /* vertical centering */
+}
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+   margin-right: 40px;
+   background-color: #fff;
+}
+
+.logo img {
+  height: 120px;     /* increase size here */
+  width: auto;      /* keeps correct proportion */
+  display: block;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-left: 36px;
+}
+
+.nav-links li a {
+  text-decoration: aqua;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #b01b1b;
+  font-weight: 600;
+}
+
+/* ===== ENQUIRE BUTTON ===== */
+.enquire-btn button,
+.enquire-btn a {
+  background-color: #b01b1b;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquire-btn button:hover,
+.enquire-btn a:hover {
+  background: #910000;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #b01b1b;
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+
+  .top-bar {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 260px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    transition: right 0.3s ease-in-out, opacity 0.3s;
+    opacity: 0;
+    z-index: 999;
+    padding-left: 20px;
+  }
+
+  .nav-links.active {
+    right: 0;
+    opacity: 1;
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+  }
+
+  .enquire-btn a,
+  .enquire-btn button {
+    padding: 10px 28px;
+    font-size: 17px;
+  }
+}
