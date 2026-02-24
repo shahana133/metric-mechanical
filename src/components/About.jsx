@@ -2,6 +2,10 @@ import React from "react";
 import "../styles/about.css";
 import AboutBottom from "./AboutBottom";
 
+// ✅ Import images from assets
+import aboutBanner from "../assets/about-banner.jpg";
+import aboutImage from "../assets/about.jpg";
+
 export default function About() {
   return (
     <>
@@ -9,7 +13,7 @@ export default function About() {
       <section
         className="about-hero"
         style={{
-          backgroundImage: "url('/images/about-banner.jpg')",
+          backgroundImage: `url(${aboutBanner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -69,13 +73,13 @@ export default function About() {
           </div>
 
           <div className="about-image">
-            <img src="/images/about.jpg" alt="Hydraulic system" />
+            <img src={aboutImage} alt="Hydraulic system" />
           </div>
         </div>
       </section>
 
-      {/* ===== VISION + MISSION + FOOTER ===== */}
+      {/* ===== VISION + MISSION ===== */}
       <AboutBottom />
     </>
   );
-}
+} 

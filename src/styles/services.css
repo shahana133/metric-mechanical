@@ -1,15 +1,17 @@
+/* ===== SERVICES SECTION ===== */
 .services-section {
   padding: 100px 6%;
   background: #5a5858;
   color: white;
+  position: relative;
 }
 
 .services-heading {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  margin-top: 60px;
-  position: absolute;
+  margin-bottom: 60px;
+  position: relative; /* changed from absolute for better flow */
 }
 
 .services-heading::after {
@@ -21,14 +23,14 @@
   margin: 15px auto 0;
 }
 
-/* Grid */
+/* ===== SERVICES GRID ===== */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-/* Card */
+/* ===== SERVICE CARD ===== */
 .service-card {
   position: relative;
   height: 340px;
@@ -38,13 +40,14 @@
   transform: translateY(40px);
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
+  transition: transform 0.3s ease;
 }
 
 .service-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 /* Hover zoom */
@@ -52,7 +55,7 @@
   transform: scale(1.1);
 }
 
-/* Overlay always visible slightly */
+/* Overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -92,7 +95,7 @@
   transform: translateY(-3px);
 }
 
-/* Animation */
+/* ===== ANIMATION ===== */
 @keyframes fadeUp {
   to {
     transform: translateY(0);
@@ -100,7 +103,18 @@
   }
 }
 
-/* Mobile */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .services-heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    height: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .services-section {
     padding: 70px 5%;
@@ -108,9 +122,29 @@
 
   .services-heading {
     font-size: 28px;
+    margin-bottom: 30px;
   }
 
   .service-card {
     height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 24px;
+  }
+
+  .service-card {
+    height: 220px;
+  }
+
+  .overlay h3 {
+    font-size: 18px;
+  }
+
+  .explore-btn {
+    padding: 8px 20px;
+    font-size: 14px;
   }
 }

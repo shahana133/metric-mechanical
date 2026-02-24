@@ -2,11 +2,17 @@ import React, { useRef } from "react";
 import "../styles/services.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
+// Import images from src/assets
+import weldingImg from "../assets/welding.jpg";
+import fabricationImg from "../assets/fabrication.jpg";
+import engineeringImg from "../assets/engineering.jpg";
+import onsiteImg from "../assets/onsite.jpg";
+
 const servicesData = [
-  { title: "Welding Works", image: "/images/welding.jpg", type: "small" },
-  { title: "Fabrication Works", image: "/images/fabrication.jpg", type: "small" },
-  { title: "Engineering Works", image: "/images/engineering.jpg", type: "small" },
-  { title: "Onsite Services", image: "/images/onsite.jpg", type: "large" },
+  { title: "Welding Works", image: weldingImg, type: "small" },
+  { title: "Fabrication Works", image: fabricationImg, type: "small" },
+  { title: "Engineering Works", image: engineeringImg, type: "small" },
+  { title: "Onsite Services", image: onsiteImg, type: "large" },
 ];
 
 export default function Services() {
@@ -21,13 +27,19 @@ export default function Services() {
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className={`service-card ${service.type}`} 
+            className={`service-card ${service.type}`}
             style={{ transitionDelay: `${index * 0.2}s` }}
           >
-            <img src={service.image} alt={service.title} className="service-image" />
+            <img
+              src={service.image}
+              alt={service.title}
+              className="service-image"
+            />
             <div className="overlay">
               <h3>{service.title}</h3>
-              {service.type === "large" && <button className="explore-btn">Explore More</button>}
+              {service.type === "large" && (
+                <button className="explore-btn">Explore More</button>
+              )}
             </div>
           </div>
         ))}

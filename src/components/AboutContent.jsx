@@ -2,11 +2,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// ✅ Import image from assets
+import aboutImage from "../assets/about.jpg";
 
 export default function AboutContent() {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
+        {/* ===== ABOUT TEXT ===== */}
         <div className="about-text">
           <h3>WELCOME TO</h3>
           <h2>Metric Mechanical</h2>
@@ -50,13 +53,15 @@ export default function AboutContent() {
             name in the field of industrial equipment and spare parts
             trading.
           </p>
+
           <Link to="/about" className="discover-btn">
-              Discover More
-            </Link>
+            Discover More
+          </Link>
         </div>
 
+        {/* ===== ABOUT IMAGE ===== */}
         <div className="about-image">
-          <img src="/images/about.jpg" alt="Hydraulic system" />
+          <img src={aboutImage} alt="Hydraulic system" />
         </div>
       </div>
     </section>

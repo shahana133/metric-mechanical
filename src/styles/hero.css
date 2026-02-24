@@ -14,14 +14,12 @@
   padding-bottom: 100px;
 }
 
-
 /* ===== SWIPER ===== */
 .hero-swiper {
   height: 85vh;
 }
 
-
-
+/* Hero slides overlay */
 .slide::before {
   content: '';
   position: absolute;
@@ -51,6 +49,7 @@
   background-size: 100%;
 }
 
+/* Slides backgrounds */
 .slide1 { background-image: url("/images/photo1.jpg"); }
 .slide2 { background-image: url("/images/photo2.jpg"); }
 .slide3 { background-image: url("/images/photo3.jpg"); }
@@ -58,7 +57,7 @@
 .slide5 { background-image: url("/images/photo5.jpg"); }
 .slide6 { background-image: url("/images/photo6.jpg"); }
 
-
+/* Slide text */
 .slide h1 {
   font-size: 48px;
   max-width: 800px;
@@ -94,6 +93,7 @@
   gap: 30px;
   z-index: 10;
 }
+
 .hero-card {
   background: #ffffff;
   padding: 35px 25px;
@@ -110,11 +110,9 @@
 
 .hero-icon {
   font-size: 40px;
-  color: #0a1f44; /* Change to your brand color */
+  color: #00bcd4;
   margin-bottom: 15px;
 }
-
-
 
 .hero-card h3 {
   margin-bottom: 12px;
@@ -124,29 +122,45 @@
 
 .hero-card p {
   font-size: 15px;
-  line-height: 2.5;
-}
-
-.hero-icon {
-  font-size: 40px;
-  color: #00bcd4;
-  margin-bottom: 15px;
+  line-height: 2;
+  text-align: justify; /* ✅ Justify alignment for captions */
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* Large Tablets / Laptops */
 @media (max-width: 1024px) {
   .slide h1 { font-size: 40px; }
   .slide p { font-size: 18px; }
   .hero-cards { gap: 25px; padding: 0 40px 40px 40px; }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   .slide h1 { font-size: 32px; }
   .slide p { font-size: 16px; }
   .hero-cards {
-    margin-top: 20px;       /* remove overlap on mobile */
+    bottom: -150px;       /* reduce overlap */
     gap: 20px;
     padding: 0 20px 30px 20px;
   }
   .hero-card { width: 100%; }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .slide h1 { font-size: 26px; }
+  .slide p { font-size: 14px; }
+  .hero-cards {
+    bottom: -120px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-card {
+    width: 100%;
+    padding: 25px 15px;
+  }
+  .hero-icon { font-size: 30px; }
+  .hero-card h3 { font-size: 18px; }
+  .hero-card p { font-size: 14px; line-height: 1.8; }
 }
